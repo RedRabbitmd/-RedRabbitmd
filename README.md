@@ -1,6 +1,6 @@
 # RedRabbitmd
 
-Static website for https://redrabbitmd.space/. Requires Node.js 22+ and npm.
+Static website for https://redrabbitmd.space/. Requires Node.js 24.x and npm.
 
 ## Local development
 
