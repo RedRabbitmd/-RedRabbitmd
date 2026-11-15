@@ -24,6 +24,8 @@ Restart `npm run dev` after making changes: automatic rebuilds are not enabled. 
 `npm run build` builds the website into `dist/`. Upload the contents of this directory to a static hosting provider.
 The build also updates CSS, JavaScript, fonts, and SEO files in the project root to support deployment directly from the repository root. Commit the generated files in `assets/` along with the source files.
 
+For Vercel, `vercel.json` sets the build command to `npm run build` and the output directory to `dist/`.
+
 After a successful `npm run build`, npm automatically runs `postbuild`: it verifies the key on the primary domain and submits the canonical URL to IndexNow. On Vercel, submissions run only in production; preview and development environments are skipped. Network and IndexNow errors are reported as warnings and do not fail the build.
 
 On Vercel, the notification is sent **before deployment**, so the search engine may still see the previous version. This does not confirm that the new version has been indexed. During the first deployment, the key file may not yet be available on the domain, in which case submission is skipped. After the key has been published, run the build again or use `npm run indexnow`.
